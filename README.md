@@ -10,6 +10,7 @@ A bunch of software engineering code snippets implemented in Java
 * Sorting
 * Fibonacci
 * String Reverse
+* Map
 
 ## TODO
 

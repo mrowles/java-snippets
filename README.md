@@ -9,6 +9,7 @@ A bunch of software engineering code snippets implemented in Java
 * Doubly Linked List
 * Sorting
 * Fibonacci
+* String Reverse
 
 ## TODO
 

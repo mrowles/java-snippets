@@ -5,9 +5,10 @@ A bunch of software engineering code snippets implemented in Java
 ## Contents
 
 * Binary Tree
-* Fibonacci
 * Linked List
+* Doubly Linked List
 * Sorting
+* Fibonacci
 
 ## TODO
 

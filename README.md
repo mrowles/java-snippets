@@ -11,8 +11,12 @@ A bunch of software engineering code snippets implemented in Java
 * Fibonacci
 * String Reverse
 * Map
+* Stack
+* Queue
 
 ## TODO
 
 * HashMap
 * Graph
+* Heaps
+* Dictionary

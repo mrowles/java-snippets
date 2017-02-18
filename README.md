@@ -13,10 +13,10 @@ A bunch of software engineering code snippets implemented in Java
 * Map
 * Stack
 * Queue
+* Heap
 
 ## TODO
 
 * HashMap
 * Graph
-* Heaps
 * Dictionary

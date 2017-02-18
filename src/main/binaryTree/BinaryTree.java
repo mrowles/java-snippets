@@ -3,10 +3,7 @@ package main.binaryTree;
 public class BinaryTree {
 
     public Node root;
-    // Pre-order Traversal
-    // 1. display root
-    // 2. traverse left subtree
-    // 3. traverse right subtree
+
     private String output = "";
 
     public BinaryTree() {
@@ -57,6 +54,10 @@ public class BinaryTree {
         }
     }
 
+    // Pre-order Traversal (root, L, R)
+    // 1. display root
+    // 2. traverse left subtree
+    // 3. traverse right subtree
     public String preOrderTraversal(Node focusNode) {
         if (focusNode != null) {
             output = output + focusNode.toString() + " ";
@@ -66,7 +67,7 @@ public class BinaryTree {
         return output;
     }
 
-    // In-order Traversal
+    // In-order Traversal (L, root, R)
     // 1. traverse left subtree
     // 2. display display root
     // 3. traverse right subtree
@@ -79,7 +80,7 @@ public class BinaryTree {
         return output;
     }
 
-    // Post-order Traversal
+    // Post-order Traversal (L, R, root)
     // 1. traverse left subtree
     // 2. traverse right subtree
     // 1. display root

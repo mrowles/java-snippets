@@ -14,9 +14,9 @@ A bunch of software engineering code snippets implemented in Java
 * Stack
 * Queue
 * Heap
+* Graph
 
 ## TODO
 
 * HashMap
-* Graph
 * Dictionary

@@ -148,16 +148,16 @@ public class DoublyLinkedList {
     }
 
     public String toString() {
-        String output = "";
+        StringBuilder output = new StringBuilder();
 
         if (head != null) {
             Node currentNode = head.getNext();
             while (currentNode != null) {
-                output += "[" + currentNode.getData().toString() + "]";
+                output.append("[").append(currentNode.getData().toString()).append("]");
                 currentNode = currentNode.getNext();
             }
         }
 
-        return output;
+        return output.toString();
     }
 }

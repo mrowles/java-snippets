@@ -1,54 +1,54 @@
 package main.binaryTree;
 
-public class BinaryTree {
+class BinaryTree {
 
-    public Node root;
+    Node root;
 
     private String output = "";
 
-    public BinaryTree() {
+    BinaryTree() {
         root = null;
     }
 
-    public void addNode(int key, String name) {
+    void addNode(int key, String name) {
 
         Node newNode = new Node(key, name);
 
         // no root set
         if (root == null) {
             root = newNode;
-        } else {
+            return;
+        }
 
-            // set root as node we will start with as we traverse the tree
-            Node focusNode = root;
+        // set root as node we will start with as we traverse the tree
+        Node focusNode = root;
 
-            // future parent for our new node
-            Node parent;
+        // future parent for our new node
+        Node parent;
 
-            while (true) {
-                parent = focusNode;
+        while (true) {
+            parent = focusNode;
 
-                // if new node should go on left side of parent node
-                if (key < focusNode.key) {
+            // if new node should go on left side of parent node
+            if (key < focusNode.key) {
 
-                    // focus on new left child
-                    focusNode = focusNode.leftChild;
+                // focus on new left child
+                focusNode = focusNode.leftChild;
 
-                    // finished if no more children
-                    if (focusNode == null) {
-                        parent.leftChild = newNode;
-                        return;
-                    }
-                } else {
+                // finished if no more children
+                if (focusNode == null) {
+                    parent.leftChild = newNode;
+                    return;
+                }
+            } else {
 
-                    // focus on new right child
-                    focusNode = focusNode.rightChild;
+                // focus on new right child
+                focusNode = focusNode.rightChild;
 
-                    // finished if no more children
-                    if (focusNode == null) {
-                        parent.rightChild = newNode;
-                        return;
-                    }
+                // finished if no more children
+                if (focusNode == null) {
+                    parent.rightChild = newNode;
+                    return;
                 }
             }
         }
@@ -58,7 +58,7 @@ public class BinaryTree {
     // 1. display root
     // 2. traverse left subtree
     // 3. traverse right subtree
-    public String preOrderTraversal(Node focusNode) {
+    String preOrderTraversal(Node focusNode) {
         if (focusNode != null) {
             output = output + focusNode.toString() + " ";
             preOrderTraversal(focusNode.leftChild);
@@ -71,7 +71,7 @@ public class BinaryTree {
     // 1. traverse left subtree
     // 2. display display root
     // 3. traverse right subtree
-    public String inOrderTraversal(Node focusNode) {
+    String inOrderTraversal(Node focusNode) {
         if (focusNode != null) {
             inOrderTraversal(focusNode.leftChild);
             output = output + focusNode.toString() + " ";
@@ -84,7 +84,7 @@ public class BinaryTree {
     // 1. traverse left subtree
     // 2. traverse right subtree
     // 1. display root
-    public String postOrderTraversal(Node focusNode) {
+    String postOrderTraversal(Node focusNode) {
         if (focusNode != null) {
             postOrderTraversal(focusNode.leftChild);
             postOrderTraversal(focusNode.rightChild);

@@ -3,7 +3,7 @@ package main.binaryTree;
 public class Node {
 
     int key;
-    String name;
+    private String name;
 
     Node leftChild;
     Node rightChild;

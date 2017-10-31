@@ -1,12 +1,12 @@
 package main;
 
-public class Fibonacci {
+class Fibonacci {
 
-    public int calculateFibonacci(int n) {
+    int recursive(int n) {
         if (n == 1 || n == 2) {
             return 1;
         }
 
-        return calculateFibonacci(n - 1) + calculateFibonacci(n - 2);
+        return recursive(n - 1) + recursive(n - 2);
     }
 }

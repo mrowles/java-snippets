@@ -14,17 +14,14 @@ public class Sorting {
 
     /**
      * BubbleSort
-     * <p>
      * Repeatedly steps through a list and compares each pair of adjacent items and swapping them if they are in the
      * wrong order.
-     * <p>
      * Efficient: small lists
      * Inefficient: large lists
-     * <p>
      * Complexity:
      * Worst-case and average: O(n2)
      */
-    public String[] BubbleSort() {
+    String[] BubbleSort() {
         String[] passes = new String[getLength() + 1];
         int k, temp, l = 0;
 
@@ -55,17 +52,14 @@ public class Sorting {
 
     /**
      * SelectionSort
-     * <p>
      * Combo of searching and sorting, each pass the unsorted element with the smallest/ or largest value is moved to
      * it's proper position in the array. Inner loop finds the next smallest or largest value and the outer loop places
      * that value into it's proper location.
-     * <p>
      * Efficent: TODO
      * Inefficient: TODO
-     * <p>
      * Complexity: TODO
      */
-    public String[] SelectionSort() {
+    String[] SelectionSort() {
         String[] passes = new String[getLength() + 1];
         int index, smallestNumber, l = 0;
 
@@ -91,18 +85,15 @@ public class Sorting {
 
     /**
      * InsertionSort
-     * <p>
      * Iterates through list, consumes one element at each repetition and grows a second array. Removes from original
      * array and inserts into sorted list where it needs to be. Repeats until no elements left in original array.
-     * <p>
      * Efficient: small lists
      * Inefficient: large lists
-     * <p>
      * Complexity:
      * Best - already sorted: O(n)
      * Worst: O(n2)
      */
-    public String[] InsertionSort() {
+    String[] InsertionSort() {
         String[] passes = new String[getLength() + 1];
 
         int temp, l = 0;
@@ -126,7 +117,7 @@ public class Sorting {
         return passes;
     }
 
-    public List<String> callQuickSort() {
+    List<String> callQuickSort() {
         ArrayList<String> passes = new ArrayList<String>();
         QuickSort(0, getLength() - 1, passes);
         return passes;
@@ -134,16 +125,13 @@ public class Sorting {
 
     /**
      * QuickSort
-     * <p>
      * Divides list into two smaller sub lists, low elements and high elements, which it then recursively sort the sub
      * lists. Choose pivot element from list (generally middle index), reorder list so that all elements with less
      * value than pivot come before pivot while all values greater than pivot value come after it. Recursively apply
      * the above steps to the sub-list of elements with smaller values and separately the sub-list of elements with
      * greater values.
-     * <p>
      * Efficient:
      * Inefficient:
-     * <p>
      * Complexity:
      * Average: O (n log(n))
      * Worst: O(n2)
@@ -192,7 +180,7 @@ public class Sorting {
         }
     }
 
-    public List<String> callMergeSort() {
+    List<String> callMergeSort() {
         tempMergeSortArray = new int[getLength()];
         ArrayList<String> passes = new ArrayList<String>();
         MergeSort(0, getLength() - 1, passes);
@@ -201,14 +189,11 @@ public class Sorting {
 
     /**
      * Merge Sorting
-     * <p>
      * Divide array into n partitions, each partition containing 1 element where it is considered sorted. Repeatedly
      * merge partitioned units to produce new sublists until there is only 1 sublist remaining, the list will be
      * sorted at the end.
-     * <p>
      * Efficient: TODO
      * Inefficient: TODO
-     * <p>
      * Complexity:
      * O(n*log(n))
      */
@@ -261,10 +246,10 @@ public class Sorting {
     }
 
     public String toString() {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (int i = 0; i < getLength(); i++) {
-            result += array[i] + ", ";
+            result.append(array[i]).append(", ");
         }
-        return result;
+        return result.toString();
     }
 }

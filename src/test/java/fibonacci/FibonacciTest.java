@@ -7,7 +7,7 @@ import org.junit.Test;
 public class FibonacciTest {
 
     @Test
-    public void testFibonacci() throws Exception {
+    public void testRecursive() throws Exception {
         Fibonacci fibonacci = new Fibonacci();
 
         assertEquals(1, fibonacci.recursive(1));
@@ -24,4 +24,21 @@ public class FibonacciTest {
         assertEquals(144, fibonacci.recursive(12));
     }
 
+    @Test
+    public void testMemoize() throws Exception {
+        Fibonacci fibonacci = new Fibonacci();
+
+        assertEquals(1, fibonacci.memoize(1));
+        assertEquals(1, fibonacci.memoize(2));
+        assertEquals(2, fibonacci.memoize(3));
+        assertEquals(3, fibonacci.memoize(4));
+        assertEquals(5, fibonacci.memoize(5));
+        assertEquals(8, fibonacci.memoize(6));
+        assertEquals(13, fibonacci.memoize(7));
+        assertEquals(21, fibonacci.memoize(8));
+        assertEquals(34, fibonacci.memoize(9));
+        assertEquals(55, fibonacci.memoize(10));
+        assertEquals(89, fibonacci.memoize(11));
+        assertEquals(144, fibonacci.memoize(12));
+    }
 }

@@ -2,14 +2,26 @@ package fibonacci;
 
 import static org.junit.Assert.assertEquals;
 
+import com.google.common.base.Stopwatch;
+import org.junit.Before;
 import org.junit.Test;
+import sorting.Sorting;
+
+import java.util.concurrent.TimeUnit;
 
 public class FibonacciTest {
+    private Stopwatch sw;
+
+    @Before
+    public void setup() throws Exception {
+        sw = Stopwatch.createUnstarted();
+    }
 
     @Test
     public void testRecursive() throws Exception {
         Fibonacci fibonacci = new Fibonacci();
 
+        sw.start();
         assertEquals(1, fibonacci.recursive(1));
         assertEquals(1, fibonacci.recursive(2));
         assertEquals(2, fibonacci.recursive(3));
@@ -22,12 +34,15 @@ public class FibonacciTest {
         assertEquals(55, fibonacci.recursive(10));
         assertEquals(89, fibonacci.recursive(11));
         assertEquals(144, fibonacci.recursive(12));
+        sw.stop();
+        System.out.println(sw.elapsed(TimeUnit.NANOSECONDS) + " ns - recursive runtime");
     }
 
     @Test
     public void testMemoize() throws Exception {
         Fibonacci fibonacci = new Fibonacci();
 
+        sw.start();
         assertEquals(1, fibonacci.memoize(1));
         assertEquals(1, fibonacci.memoize(2));
         assertEquals(2, fibonacci.memoize(3));
@@ -40,5 +55,7 @@ public class FibonacciTest {
         assertEquals(55, fibonacci.memoize(10));
         assertEquals(89, fibonacci.memoize(11));
         assertEquals(144, fibonacci.memoize(12));
+        sw.stop();
+        System.out.println(sw.elapsed(TimeUnit.NANOSECONDS) + " ns - memoize runtime");
     }
 }

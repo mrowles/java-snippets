@@ -1,3 +1,7 @@
+# IDE
+.classpath
+.project
+.settings
 .idea/
 
 m.xml.tag
@@ -11,7 +15,7 @@ buildNumber.properties
 
 *.class
 
-# Package Files #
+# Package Files
 *.jar
 *.war
 *.ear

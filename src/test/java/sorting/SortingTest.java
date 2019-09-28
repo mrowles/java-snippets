@@ -19,7 +19,7 @@ public class SortingTest {
     @Before
     public void setup() throws Exception {
         sorting = new Sorting(array);
-        sw = new Stopwatch();
+        sw = Stopwatch.createUnstarted();
     }
 
     @Test
@@ -27,7 +27,7 @@ public class SortingTest {
         sw.start();
         String[] passes = sorting.BubbleSort();
         sw.stop();
-        System.out.println(sw.elapsedTime(TimeUnit.NANOSECONDS) + " ns - Bubble sorting runtime");
+        System.out.println(sw.elapsed(TimeUnit.NANOSECONDS) + " ns - Bubble sorting runtime");
 
         // original ="4, 2, 9, 6, -15, 23, 12, 34, 0, 1, "
         assertEquals("2, 4, 6, -15, 9, 12, 23, 0, 1, 34, ", passes[0]);
@@ -51,7 +51,7 @@ public class SortingTest {
         sw.start();
         String[] passes = sorting.SelectionSort();
         sw.stop();
-        System.out.println(sw.elapsedTime(TimeUnit.NANOSECONDS) + " ns - Selection sorting runtime");
+        System.out.println(sw.elapsed(TimeUnit.NANOSECONDS) + " ns - Selection sorting runtime");
 
         // original ="4, 2, 9, 6, -15, 23, 12, 34, 0, 1, "
         assertEquals("-15, 2, 9, 6, 4, 23, 12, 34, 0, 1, ", passes[0]);
@@ -73,7 +73,7 @@ public class SortingTest {
         sw.start();
         String[] passes = sorting.InsertionSort();
         sw.stop();
-        System.out.println(sw.elapsedTime(TimeUnit.NANOSECONDS) + " ns - Insertion sorting runtime");
+        System.out.println(sw.elapsed(TimeUnit.NANOSECONDS) + " ns - Insertion sorting runtime");
 
         // original ="4, 2, 9, 6, -15, 23, 12, 34, 0, 1, "
         assertEquals("2, 4, 9, 6, -15, 23, 12, 34, 0, 1, ", passes[0]); // 1st = 4
@@ -95,7 +95,7 @@ public class SortingTest {
         sw.start();
         List<String> passes = sorting.callQuickSort();
         sw.stop();
-        System.out.println(sw.elapsedTime(TimeUnit.NANOSECONDS) + " ns - Quick sorting runtime");
+        System.out.println(sw.elapsed(TimeUnit.NANOSECONDS) + " ns - Quick sorting runtime");
 
         // original ="4, 2, 9, 6, -15, 23, 12, 34, 0, 1, "
         assertEquals("-15, 2, 9, 6, 4, 23, 12, 34, 0, 1, ", passes.get(0)); // -15 was pivot
@@ -117,7 +117,7 @@ public class SortingTest {
         sw.start();
         List<String> passes = sorting.callMergeSort();
         sw.stop();
-        System.out.println(sw.elapsedTime(TimeUnit.NANOSECONDS) + " ns - Merge sorting runtime");
+        System.out.println(sw.elapsed(TimeUnit.NANOSECONDS) + " ns - Merge sorting runtime");
 
         // original ="4, 2, 9, 6, -15, 23, 12, 34, 0, 1, "
         assertEquals("2, 4, 9, 6, -15, 23, 12, 34, 0, 1, ", passes.get(0));

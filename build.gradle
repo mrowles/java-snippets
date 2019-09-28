@@ -15,3 +15,10 @@ group = 'mrowles'
 version = '0.0.1'
 description = 'java-snippets'
 sourceCompatibility = '1.8'
+
+jar {
+    manifest {
+        attributes 'Implementation-Version': version,
+                   'Main-Class': 'JavaSnippets'
+    }
+}

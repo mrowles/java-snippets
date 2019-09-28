@@ -1,8 +1,5 @@
 # IDE
-<<<<<<< HEAD
-=======
 .vscode
->>>>>>> Updates gitignore
 .classpath
 .project
 .settings
@@ -18,7 +15,7 @@ buildNumber.properties
 .mvn/timing.properties
 
 ### Gradle ###
-.gradle
+.gradle/
 build/
 gradle-app.setting
 !gradle-wrapper.jar

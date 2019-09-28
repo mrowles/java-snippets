@@ -1,4 +1,4 @@
-# Generics
+# Java Snippets
 
 A bunch of software engineering code snippets implemented in Java
 
@@ -16,7 +16,17 @@ A bunch of software engineering code snippets implemented in Java
 * Heap
 * Graph
 
-## TODO
+### TODO
 
 * HashMap
 * Dictionary
+
+## Getting started
+
+1. Build
+
+```gradle build```
+
+2. Test
+
+```gradle test```

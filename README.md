@@ -1,6 +1,6 @@
 # Java Snippets
 
-A bunch of software engineering code snippets implemented in Java
+A bunch of software engineering code snippets of data structures and algorithms implemented in Java
 
 ## Contents
 

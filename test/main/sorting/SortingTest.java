@@ -1,4 +1,4 @@
-package main;
+package main.sorting;
 
 import static org.junit.Assert.assertEquals;
 

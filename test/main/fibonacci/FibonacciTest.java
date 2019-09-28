@@ -1,4 +1,4 @@
-package main;
+package main.fibonacci;
 
 import static org.junit.Assert.assertEquals;
 

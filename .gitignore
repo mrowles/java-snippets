@@ -1,4 +1,8 @@
 # IDE
+<<<<<<< HEAD
+=======
+.vscode
+>>>>>>> Updates gitignore
 .classpath
 .project
 .settings

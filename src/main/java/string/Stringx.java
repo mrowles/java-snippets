@@ -1,11 +1,7 @@
-package stringReverse;
+package string;
 
-public class StringReverse {
-
-    public StringReverse() {
-    }
-
-    public String reverse(String str) {
+public class Stringx {
+    public static String reverse(String str) {
         if (str.length() < 2) {
             return str;
         }

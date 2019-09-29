@@ -143,6 +143,22 @@ public class DoublyLinkedList {
         return currentNode.getNext();
     }
 
+    public void reverse() {
+        Node temp = null;
+        Node current = head;
+
+        while (current != null) {
+            temp = current.getPrevious();
+            current.setPrevious(current.getNext());
+            current.setNext(temp);
+            current = current.getPrevious();
+        }
+
+        if (temp != null) {
+            head = temp.getPrevious();
+        }
+    }
+
     public int size() {
         return getCounter();
     }

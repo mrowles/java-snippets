@@ -5,7 +5,6 @@ import static org.junit.Assert.assertEquals;
 import com.google.common.base.Stopwatch;
 import org.junit.Before;
 import org.junit.Test;
-import sorting.Sorting;
 
 import java.util.concurrent.TimeUnit;
 

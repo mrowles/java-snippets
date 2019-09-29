@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class ClosestPointsToOrigin {
-    int[][] points;
+    private int[][] points;
 
     public static int[][] findClosestSort(int[][] points, int amt) {
         int pointsSize = points.length;
@@ -17,7 +17,8 @@ public class ClosestPointsToOrigin {
         Arrays.sort(distances);
         int distanceOrigin = distances[amt - 1];
 
-        int[][] closest = new int[amt][2];
+        int plotLength = 2; // x, y
+        int[][] closest = new int[amt][plotLength];
         int t = 0;
         for (int i = 0; i < pointsSize; ++i) {
             if (calculateDistance(points[i]) <= distanceOrigin) {

@@ -1,6 +1,8 @@
 package string;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -26,5 +28,16 @@ public class StringxTest {
         assertEquals(1, Stringx.strstrKmp("Batman", "atm"));
         assertEquals(-1, Stringx.strstrKmp("Batman and Superman", "Robin"));
         assertEquals(11, Stringx.strstrKmp("Batman and Superman", "Super"));
+    }
+
+    @Test
+    public void testOneEditAwayMatch() {
+        assertTrue(Stringx.oneEditAwayMatch("Batman", "atman"));
+        assertTrue(Stringx.oneEditAwayMatch("Batman", " Batman"));
+        assertTrue(Stringx.oneEditAwayMatch("Batman", "Batman "));
+        assertTrue(Stringx.oneEditAwayMatch("Batman", "Bat an"));
+
+        assertFalse(Stringx.oneEditAwayMatch("Batman", "atma"));
+        assertFalse(Stringx.oneEditAwayMatch("Batman", "Bat  n"));
     }
 }

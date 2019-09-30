@@ -19,4 +19,12 @@ public class StringxTest {
         assertEquals(-1, Stringx.strstrIterative("Batman and Superman", "Robin"));
         assertEquals(11, Stringx.strstrIterative("Batman and Superman", "Super"));
     }
+
+    @Test
+    public void testStrstrKmp() {
+        assertEquals(0, Stringx.strstrKmp("Batman", "Bat"));
+        assertEquals(1, Stringx.strstrKmp("Batman", "atm"));
+        assertEquals(-1, Stringx.strstrKmp("Batman and Superman", "Robin"));
+        assertEquals(11, Stringx.strstrKmp("Batman and Superman", "Super"));
+    }
 }

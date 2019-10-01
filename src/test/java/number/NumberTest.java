@@ -43,4 +43,19 @@ public class NumberTest {
         assertEquals(7, results.get(3).intValue());
         assertEquals(11, results.get(4).intValue());
     }
+
+    @Test
+    public void addTwoBinaryNumbers() {
+        String expected = "1";
+        String result = Number.addTwoBinaryNumbers("1", "0");
+        assertEquals(expected, result);
+
+        expected = "1101";
+        result = Number.addTwoBinaryNumbers("100", "1001");
+        assertEquals(expected, result);
+
+        expected = "11111111";
+        result = Number.addTwoBinaryNumbers("10011001", "1100110");
+        assertEquals(expected, result);
+    }
 }

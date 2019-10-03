@@ -1,4 +1,4 @@
-package algorithms.arrays;
+package algorithms.isSubset;
 
 import java.util.Arrays;
 

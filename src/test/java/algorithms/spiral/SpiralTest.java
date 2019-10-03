@@ -1,4 +1,4 @@
-package algorithms.arrays;
+package algorithms.spiral;
 
 import static org.junit.Assert.assertArrayEquals;
 

@@ -1,4 +1,4 @@
-package algorithms.arrays;
+package algorithms.spiral;
 
 public class Spiral {
     public static int[][] spiralIterative(int n) {

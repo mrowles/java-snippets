@@ -4,22 +4,33 @@ A bunch of software engineering code snippets of data structures and algorithms 
 
 ## Contents
 
+### Data Structures
+
+* Binary Heap
 * Binary Tree
-* Linked List
 * Doubly Linked List
-* Sorting
-* Fibonacci
-* String Reverse
-* Map
-* Stack
-* Queue
-* Heap
 * Graph
-
-### TODO
-
 * HashMap
-* Dictionary
+* Heap
+* Linked List
+* Queue
+* Stack
+
+### Algorithms
+
+* ABC Count
+* Closest Point to Origin
+* Fibonacci
+* Look and Say
+* Sorting
+    * Bubble Sort
+    * Selection Sort
+    * Insertion Sort
+    * Quick Sort
+    * Merge Sort
+* String Reverse
+* Square Root
+* Three Sum
 
 ## Getting started
 

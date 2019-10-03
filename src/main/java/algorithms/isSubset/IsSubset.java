@@ -25,8 +25,4 @@ public class IsSubset {
 
         return true;
     }
-
-    private static boolean spiralIsInvalid(int[][] m, int r, int c) {
-        return r < 0 || c < 0 || r >= m.length || c >= m.length || m[r][c] != 0;
-    }
 }

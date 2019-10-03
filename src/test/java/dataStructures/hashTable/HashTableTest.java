@@ -44,7 +44,7 @@ public class HashTableTest {
         table.remove("def");
         assertEquals(1, table.size());
         assertEquals(123, table.get("abc").intValue());
-        assertNull(table.get("def").intValue());
+        assertNull(table.get("def"));
     }
 
     @Test

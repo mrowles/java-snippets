@@ -19,8 +19,11 @@ A bunch of software engineering code snippets of data structures and algorithms 
 ### Algorithms
 
 * ABC Count
+* Add Two Binary Numbers
 * Closest Point to Origin
 * Fibonacci
+* Find Prime Numbers
+* Is Subset
 * Look and Say
 * Sorting
     * Bubble Sort
@@ -28,8 +31,9 @@ A bunch of software engineering code snippets of data structures and algorithms 
     * Insertion Sort
     * Quick Sort
     * Merge Sort
-* String Reverse
+* Spiral
 * Square Root
+* String Reverse
 * Three Sum
 
 ## Getting started

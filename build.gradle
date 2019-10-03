@@ -24,20 +24,3 @@ jar {
                 'Main-Class': 'JavaSnippets'
     }
 }
-
-test {
-    useTestNG()
-    useJUnitPlatform()
-//    include 'src/test/java/**'
-    testLogging.showStandardStreams = true
-    minHeapSize = "128m"
-    maxHeapSize = "512m"
-//    jvmArgs '-XX:MaxPermSize=256m'
-    beforeTest { descriptor ->
-        logger.lifecycle("Running test: " + descriptor)
-    }
-//    failFast = true
-    onOutput { descriptor, event ->
-        logger.lifecycle("Test: " + descriptor + " produced standard out/err: " + event.message)
-    }
-}

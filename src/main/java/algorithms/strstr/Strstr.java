@@ -1,15 +1,7 @@
-package algorithms.string;
+package algorithms.strstr;
 
-public class Stringx {
-    public static String reverse(String str) {
-        if (str.length() < 2) {
-            return str;
-        }
-
-        return reverse(str.substring(1)) + str.charAt(0);
-    }
-
-    public static int strstrIterative(String primaryStr, String subStr) {
+public class Strstr {
+    public static int iterative(String primaryStr, String subStr) {
         if (subStr.length() > primaryStr.length()) {
             return -1;
         }
@@ -36,7 +28,7 @@ public class Stringx {
     }
 
     // https://en.wikipedia.org/wiki/Knuth-Morris-Pratt_algorithm
-    public static int strstrKmp(String primaryStr, String subStr) {
+    public static int kmp(String primaryStr, String subStr) {
         if (subStr.length() > primaryStr.length()) {
             return -1;
         }
@@ -72,58 +64,6 @@ public class Stringx {
         }
 
         return -1;
-    }
-
-    public static boolean oneEditAwayMatch(String word1, String word2) {
-        int word1Len = word1.length();
-        int word2Len = word2.length();
-
-        if (word1Len == 0 || word2Len == 0) {
-            return false;
-        }
-
-        if ((word1Len - word2Len) > 1 || (word2Len - word1Len) > 1) {
-            return false;
-        }
-
-        int i = 0;
-        int j = 0;
-        int differences = 0;
-
-        while (i < word1Len && j < word2Len) {
-            char word1Char = word1.charAt(i);
-            char word2Char = word2.charAt(j);
-
-            if (word1Char != word2Char) {
-                differences++;
-
-                if (word1Len > word2Len) {
-                    i++;
-                }
-
-                if (word2Len > word1Len) {
-                    j++;
-                }
-
-                if (word1Len == word2Len) {
-                    i++;
-                    j++;
-                }
-            } else {
-                i++;
-                j++;
-            }
-
-            if (differences > 1) {
-                return false;
-            }
-        }
-
-        if (differences == 1 && word1Len != word2Len && (i != word1Len || j != word2Len)) {
-            return false;
-        }
-
-        return true;
     }
 
     private static int[] getKmpArray(String subStr) {

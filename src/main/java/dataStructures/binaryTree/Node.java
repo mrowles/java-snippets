@@ -3,10 +3,9 @@ package dataStructures.binaryTree;
 public class Node {
 
     int key;
-    private String name;
-
     Node leftChild;
     Node rightChild;
+    private String name;
 
     public Node(int key, String name) {
         this.key = key;

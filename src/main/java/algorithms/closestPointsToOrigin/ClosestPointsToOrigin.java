@@ -29,6 +29,10 @@ public class ClosestPointsToOrigin {
         return closest;
     }
 
+    private static int calculateDistance(int[] point) {
+        return point[0] * point[0] + point[1] * point[1];
+    }
+
     public int[][] findClosestDivideAndConquer(int[][] points, int amt) {
         this.points = points;
         sort(0, points.length - 1, amt);
@@ -83,9 +87,5 @@ public class ClosestPointsToOrigin {
         points[i][1] = points[j][1];
         points[j][0] = temp1;
         points[j][1] = temp2;
-    }
-
-    private static int calculateDistance(int[] point) {
-        return point[0] * point[0] + point[1] * point[1];
     }
 }

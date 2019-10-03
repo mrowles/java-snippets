@@ -5,9 +5,15 @@ import java.util.List;
 
 public class Neighbour {
 
+    private static Integer total;
     private Integer value;
     private List<Neighbour> neighbours;
-    private static Integer total;
+
+    public Neighbour(Integer value) {
+        this.value = value;
+        this.neighbours = new ArrayList<Neighbour>();
+        total = 0;
+    }
 
     public Integer getValue() {
         return value;
@@ -17,12 +23,6 @@ public class Neighbour {
         this.value = value;
     }
 
-    public Neighbour(Integer value) {
-        this.value = value;
-        this.neighbours = new ArrayList<Neighbour>();
-        total = 0;
-    }
-
     public void addNeighbour(Neighbour neighbour) {
         neighbours.add(neighbour);
         neighbour.neighbours.add(this);
@@ -30,12 +30,12 @@ public class Neighbour {
         total++;
     }
 
-    public void setNeighbours(List<Neighbour> neighbours) {
-        this.neighbours = neighbours;
-    }
-
     public List<Neighbour> getNeighbours() {
         return neighbours;
+    }
+
+    public void setNeighbours(List<Neighbour> neighbours) {
+        this.neighbours = neighbours;
     }
 
 }

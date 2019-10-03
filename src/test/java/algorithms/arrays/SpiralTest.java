@@ -1,28 +1,25 @@
-package algorithms.array;
+package algorithms.arrays;
 
 import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class ArrayTest {
-
+public class SpiralTest {
     @Test
-    public void testSpiral() {
+    public void testSpiralIterative() {
         int[][] expected = new int[][]{
                 new int[]{1, 2, 3, 4},
                 new int[]{12, 13, 14, 5},
                 new int[]{11, 16, 15, 6},
                 new int[]{10, 9, 8, 7}
         };
-        int[][] result = Array.spiral(4);
+        int[][] result = Spiral.spiralIterative(4);
         assertArrayEquals(expected, result);
 
         expected = new int[][]{
                 new int[]{1}
         };
-        result = Array.spiral(1);
+        result = Spiral.spiralIterative(1);
         assertArrayEquals(expected, result);
 
         expected = new int[][]{
@@ -35,22 +32,7 @@ public class ArrayTest {
                 new int[]{23, 44, 43, 42, 41, 40, 39, 14},
                 new int[]{22, 21, 20, 19, 18, 17, 16, 15},
         };
-        result = Array.spiral(8);
+        result = Spiral.spiralIterative(8);
         assertArrayEquals(expected, result);
-    }
-
-    @Test
-    public void testIsSubsetIterative() {
-        int[] primary = new int[]{1};
-        int[] subset = new int[]{1};
-        assertTrue(Array.isSubsetIterative(primary, subset));
-
-        primary = new int[]{1, 2, 3};
-        subset = new int[]{1, 3};
-        assertTrue(Array.isSubsetIterative(primary, subset));
-
-        primary = new int[]{1, 2, 3, 0, 0, 0};
-        subset = new int[]{0, 0, 0, 0};
-        assertFalse(Array.isSubsetIterative(primary, subset));
     }
 }

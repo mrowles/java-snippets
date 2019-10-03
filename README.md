@@ -24,7 +24,9 @@ A bunch of software engineering code snippets of data structures and algorithms 
 * Fibonacci
 * Find Prime Numbers
 * Is Subset
+* Levenshtein Distance
 * Look and Say
+* Palindrome
 * Sorting
     * Bubble Sort
     * Selection Sort

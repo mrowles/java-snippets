@@ -24,7 +24,7 @@ public class ThreeSum {
             int currentSum = sum - args[i];
 
             for (int j = i + 1; j < args.length; j++) {
-                if (s.contains(currentSum - args[j]) && currentSum - args[j] != (int) s.toArray()[s.size() - 1]) {
+                if (s.contains(currentSum - args[j]) && (currentSum - args[j]) != (s.size() - 1)) {
                     return new int[]{args[i], args[j], currentSum - args[j]};
                 }
                 s.add(args[j]);

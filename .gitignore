@@ -34,3 +34,6 @@ hs_err_pid*
 
 target
 *.iml
+
+# OS
+.DS_Store

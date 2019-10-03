@@ -1,4 +1,4 @@
-package map;
+package hashmap;
 
 import static org.junit.Assert.assertEquals;
 

@@ -1,14 +1,14 @@
-package map;
+package hashmap;
 
 import java.util.Arrays;
 
-public class Map<K, V> {
+public class HashMap<K, V> {
 
     private int size;
     private int DEFAULT_CAPACITY = 16;
     private Entry<K, V>[] values;
 
-    public Map() {
+    public HashMap() {
         values = new Entry[DEFAULT_CAPACITY];
     }
 

@@ -1,4 +1,4 @@
-package map;
+package hashmap;
 
 public class Entry<K, V> {
     private final K key;

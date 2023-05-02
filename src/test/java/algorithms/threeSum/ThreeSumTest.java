@@ -1,4 +1,4 @@
-package algorithms.threesum;
+package algorithms.threeSum;
 
 import static org.junit.Assert.assertArrayEquals;
 

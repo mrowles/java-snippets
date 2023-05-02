@@ -1,6 +1,14 @@
 package algorithms.abcCount;
 
 public class AbcCount {
+    private static int factorial(int n) {
+        int result = 1;
+        for (int i = 1; i <= n; i++) {
+            result = result * i;
+        }
+        return result;
+    }
+    
     // length = n, aCount < n, bCount <= 1, cCount <=2
     public static int findCombinations(int n) {
         int aCount;
@@ -29,14 +37,6 @@ public class AbcCount {
             }
         }
 
-        return result;
-    }
-
-    private static int factorial(int n) {
-        int result = 1;
-        for (int i = 1; i <= n; i++) {
-            result = result * i;
-        }
         return result;
     }
 }

@@ -4,10 +4,10 @@ import java.util.HashMap;
 
 /**
  * SelectionSort
- * Combo of searching and algorithms.sorting, each pass the unsorted element with the smallest/ or largest value is moved to
+ * Combo of searching and algorithms.sorting, each pass the unsorted element with the smallest/or largest value is moved to
  * it's proper position in the algorithms.array. Inner loop finds the next smallest or largest value and the outer loop places
  * that value into it's proper location.
- * Efficent: TODO
+ * Efficient: TODO
  * Inefficient: TODO
  * Complexity: TODO
  */

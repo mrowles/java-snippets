@@ -40,7 +40,7 @@ public class BinaryHeap {
         }
 
         heap[heapSize++] = x;
-        buddleUp(heapSize - 1);
+        bubbleUp(heapSize - 1);
     }
 
     public int findMin() {
@@ -70,7 +70,7 @@ public class BinaryHeap {
         return keyItem;
     }
 
-    private void buddleUp(int childInd) {
+    private void bubbleUp(int childInd) {
         int tmp = heap[childInd];
 
         while (childInd > 0 && tmp < heap[parent(childInd)]) {

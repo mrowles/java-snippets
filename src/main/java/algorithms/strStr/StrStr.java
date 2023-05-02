@@ -1,6 +1,6 @@
-package algorithms.strstr;
+package algorithms.strStr;
 
-public class Strstr {
+public class StrStr {
     public static int iterative(String primaryStr, String subStr) {
         if (subStr.length() > primaryStr.length()) {
             return -1;

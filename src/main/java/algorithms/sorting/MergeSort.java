@@ -5,7 +5,7 @@ import java.util.HashMap;
 /**
  * Merge Sorting
  * Divide algorithms.array into n partitions, each partition containing 1 element where it is considered sorted. Repeatedly
- * merge partitioned units to produce new sublists until there is only 1 sublist remaining, the list will be
+ * merge partitioned units to produce new sub-lists until there is only 1 sublist remaining, the list will be
  * sorted at the end.
  * Efficient: TODO
  * Inefficient: TODO

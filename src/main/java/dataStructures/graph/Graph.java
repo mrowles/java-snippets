@@ -9,7 +9,7 @@ public class Graph {
 
     public Graph(int vertices) {
         if (vertices < 0) {
-            throw new IllegalArgumentException("Number of vertices must be nonnegative");
+            throw new IllegalArgumentException("Number of vertices must be non-negative");
         }
 
         this.vertices = vertices;

@@ -1,4 +1,4 @@
-package algorithms.threesum;
+package algorithms.threeSum;
 
 import java.util.HashSet;
 

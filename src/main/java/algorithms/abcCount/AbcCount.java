@@ -8,7 +8,7 @@ public class AbcCount {
         }
         return result;
     }
-    
+
     // length = n, aCount < n, bCount <= 1, cCount <=2
     public static int findCombinations(int n) {
         int aCount;

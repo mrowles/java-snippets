@@ -28,11 +28,11 @@ A bunch of software engineering code snippets of data structures and algorithms 
 * Look and Say
 * Palindrome
 * Sorting
-    * Bubble Sort
-    * Selection Sort
-    * Insertion Sort
-    * Quick Sort
-    * Merge Sort
+  * Bubble Sort
+  * Selection Sort
+  * Insertion Sort
+  * Quick Sort
+  * Merge Sort
 * Spiral
 * Square Root
 * String Reverse
@@ -41,9 +41,6 @@ A bunch of software engineering code snippets of data structures and algorithms 
 ## Getting started
 
 1. Build
-
-```gradle build```
-
+   ```gradle build```
 2. Test
-
-```gradle test```
+   ```gradle test```
